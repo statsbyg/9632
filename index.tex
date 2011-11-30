@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{rotating}
+\begin{document}
+    \title{Computers}
+    \author{Yared Bekele}
+    \date{\today}
+    \maketitle
+    \thispagestyle{empty}
+    \pagebreak
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+    \newpage
+    \pagestyle{plain}
+    \setcounter{page}{1}
+        \input{introduction/introduction}
+        \input{History/history}
+        \input{CompLan/language}
+        \input{Discussion/Discussion}
+        \input{Remark/remark}
+    \newpage
+        %\input{appendix}
+    \newpage
+    \clearpage
+        \nocite{*}
+        \bibliographystyle{plain}
+        \bibliography{references}
+\end{document}

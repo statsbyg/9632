@@ -7,20 +7,23 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="topmenu" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="LeftPane" Runat="Server">
-    <asp:DataGrid ID="dgQuick" 
+    <asp:DataGrid 
+    ID="dgQuick" 
    runat="server" 
    BackColor="#00EAB2" 
    BorderWidth="2px" 
    AutoGenerateColumns="False" Width="100%" 
-   ShowFooter="True" AllowPaging="True" PageSize="20" AllowCustompaging="true" OnPageIndexChanged="dgQuick_PageIndexChanged">
- 
-<PagerStyle Mode="NumericPages"></PagerStyle>
-        <Columns>
-            <asp:HyperLinkColumn DataNavigateUrlField="SpeciesName" NavigateUrl="species.aspx" 
-                DataTextField="SpeciesName" HeaderText="Species Name"></asp:HyperLinkColumn>
-        </Columns>
- 
-   </asp:DataGrid>
+   ShowFooter="True" AllowPaging="True" PageSize="20" AllowCustompaging="true" OnPageIndexChanged="dgQuick_PageIndexChanged"
+   PagerStyle-PageButtonCount="5"
+   PagerStyle-Mode="NumericPages" 
+   PagerStyle-Visible="true">
+   <Columns>
+                <asp:BoundColumn HeaderText="Species Name" DataField="SpeciesName"></asp:BoundColumn>
+              
+     </Columns>        
+ </asp:DataGrid>
+ <asp:TextBox ID="txtNewPageNumber" runat="server" Width="40"></asp:TextBox>
+ <asp:Button ID="btnDisplayPage" runat="server" Text="Update" />
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
     

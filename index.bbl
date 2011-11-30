@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{yared}
+{Frederick P. Brooks, Jr}.
+\newblock {\em Essense and Accidents of Software Engineering}.
+\newblock {University of North Carolina, Chapel Hill}, April 1987.
+
+\bibitem{demeke}
+{Theo Dimitrakos, Juan Biccarregui and Ketil Stolen}.
+\newblock {CORAS - A Framework for Risk Analysis of Security Critical Systems}.
+\newblock {ERCIM News, No. 49, April 2002.
+  http://www.ercim.eu/publication/Ercim\_News/enw49/dimitrakos.html}.
+
+\end{thebibliography}

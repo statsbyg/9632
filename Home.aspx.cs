@@ -14,28 +14,34 @@ using System.Xml.Linq;
 
 public partial class Home : System.Web.UI.Page
 {
-    
+    //private void dgQuick__Page(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+    //{
+    //    dgQuick.CurrentPageIndex = e.NewPageIndex;
+    //    BindData();
+    //}
     public dbCon DatabaseCon = new dbCon();
     protected void Page_Load(object sender, EventArgs e)
     {
-        dgQuick.DataSource = DatabaseCon.dbRetrieve("SELECT SpeciesName FROM SpeciesTable");
-        //dgQuick.DataBind();
-        DatabaseCon.CloseDbCon_Reader();
-        //this.btnDisplayPage.Click += new System.EventHandler(this.btnDisplayPage_Click);
+        dgQuick.DataSource = DatabaseCon.dbRetrieve("SELECT SpeciesName FROM SpeciesTable ORDER BY SpeciesName");
+        dgQuick.DataBind();
         if (!Page.IsPostBack)
         {
             dgQuick.DataBind();
         }   
+        DatabaseCon.CloseDbCon_Reader();
+       this.btnDisplayPage.Click += new System.EventHandler(this.btnDisplayPage_Click);
+       
+        
    }
-    private void dgQuick__Page(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
-    {
-        dgQuick.CurrentPageIndex = e.NewPageIndex;
-        DataBind();
-    }
+    //private void dgQuick__Page(object source, System.Web.UI.WebControls.DataGridPageChangedEventArgs e)
+    //{
+    //    dgQuick.CurrentPageIndex = e.NewPageIndex;
+    //    DataBind();
+    //}
     private void btnDisplayPage_Click(Object sender, System.EventArgs e)
     {
         //set new page index and rebind the data. start from zero
-       // dgQuick.CurrentPageIndex = Convert.ToInt32(txtNewPageNumber.Text) - 1;
+        dgQuick.CurrentPageIndex = Convert.ToInt32(txtNewPageNumber.Text) - 1;
         dgQuick.DataBind();
     }
     //private void BindData()

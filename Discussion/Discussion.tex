@@ -1,0 +1,5 @@
+\section{Discussion}
+If a packet arrives at or leaves from a queueing node of a computer network, the state of the node's buffer changes, and thus the state of the queue changes as well. In such cases, as discussed in Appendix C, if the system can be expressed by a Markov process, the activity of the processin terms of the number of packetscan be depicted by a state machine known as the Markov chain. A particular instance of a Markov chain is the birth-and-death process.
+
+In a birth-and-death process, any given state i can connect only to state i - 1 with rate µi or to state i + 1 with rate ?i, as shown in Figure 11.3. In general, if A(t) and D(t) are the total number of arriving packets and the total number of departing packets, respectively, up to given time t, the total number of packets in the system at time t is described by K(t) = A(t) - D(t). With this analysis, A(t) is the total number of births, and D(t) is the total number of deaths. Therefore, K(t) can be viewed as a birth-and-death process representing the cumulative number of packets in a first-come, first-served service discipline, you can find this in table\ref{table:yared}.
+
